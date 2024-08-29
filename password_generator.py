@@ -3,6 +3,8 @@ import random
 print("Welcome to your password generator!")
 
 chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*().,'
+nums = '0123456789'
+allChars = chars + nums
 
 #prompt to enter how many passwords you need to generate
 number = input("Amount of passwords to generate: ")
@@ -19,5 +21,5 @@ print('\nhere are your passwords:')
 for password in range(number):
     passwords = ""
     for c in range(length):
-        passwords += random.choice(chars)
+        passwords += random.choice(allChars)
     print(passwords)
